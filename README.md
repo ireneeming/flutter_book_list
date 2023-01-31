@@ -1,16 +1,26 @@
 # flutter_book_list
 
-A new Flutter project.
+My First Flutter Demo APP
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+UI 구현 연습에 중점을 둔, 도서 목록 앱 만들기.
 
-A few resources to get you started if this is your first Flutter project:
+1. 화면
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- ListScreen(목록 화면)
+- DetailScreen(상세 화면)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+2. 기능
+
+- (UI) 도서 목록
+- (UI) 도서 상세
+- 도서 목록에서 도서를 선택하면 해당 도서 상세 화면으로 이동
+
+3. 모델
+
+- Book
+  1. title: 제목
+  2. subtitle: 부제
+  3. description: 설명
+  4. image: 대표 이미지
