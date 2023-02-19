@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_book_list/screens/detail_screen.dart';
 import 'package:flutter_book_list/screens/list_screen.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Book List APP',
-      home: ListScreen(),
+      home: DetailScreen(),
     );
   }
 }

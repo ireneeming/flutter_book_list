@@ -4,9 +4,8 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('제목')),
-        body: Column(
-          children: [],
-        ));
+      appBar: AppBar(title: Text('책 제목')),
+      body: Container(),
+    );
   }
 }
