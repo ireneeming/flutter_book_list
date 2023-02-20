@@ -1,25 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_book_list/models/book.dart';
 
 class DetailScreen extends StatelessWidget {
-  final String title;
-  final String subtitle;
-  final String description;
-  final String image;
-
-  DetailScreen({
-    required this.title,
-    required this.subtitle,
-    required this.description,
-    required this.image,
-  });
+  final Book book;
+  DetailScreen({required this.book});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(title)),
+      appBar: AppBar(title: Text(book.title)),
       body: Column(
         children: [
-          Image.network(image),
+          Image.network(book.image),
           Padding(padding: EdgeInsets.all(3)),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,13 +25,13 @@ class DetailScreen extends StatelessWidget {
                   children: [
                     Container(
                       child: Text(
-                        title,
+                        book.title,
                         style: TextStyle(
                             fontSize: 23, fontWeight: FontWeight.bold),
                       ),
                     ),
                     Text(
-                      subtitle,
+                      book.subtitle,
                       style: TextStyle(fontSize: 18, color: Colors.grey),
                     )
                   ],
@@ -89,7 +81,7 @@ class DetailScreen extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.all(15),
-            child: Text(description),
+            child: Text(book.description),
           )
         ],
       ),
