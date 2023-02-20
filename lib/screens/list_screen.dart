@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_book_list/screens/detail_screen.dart';
 
 class ListScreen extends StatelessWidget {
   @override
@@ -84,8 +85,18 @@ class BookTile extends StatelessWidget {
       // ListTile 위젯을 return함. 변수 title, image를 사용하여 값을 넣어줌.
       title: Text(title),
       leading: Image.network(image),
-      onTap:
-          () {}, // 여기서 title, subtitle, description, image 데이터를 다음 화면으로 이동하며 넘기게 된다.
+      onTap: () {
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(
+              title: title,
+              subtitle: subtitle,
+              description: description,
+              image: image,
+            ),
+          ),
+        );
+      }, // 여기서 title, subtitle, description, image 데이터를 다음 화면으로 이동하며 넘기게 된다.
     );
   }
 }
